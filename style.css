@@ -9,8 +9,8 @@ body {
 }
 
 .container {
-    max-width: 400px;
-    width: 100%;
+    max-width: 500px;
+    width: 90%;
     padding: 20px;
     background-color: #fff;
     border-radius: 10px;
@@ -31,10 +31,22 @@ label {
     color: #666;
 }
 
-input {
-    width: 100%;
-    padding: 10px;
+.input-group {
+    display: flex;
     margin-bottom: 20px;
+}
+
+input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+select {
+    margin-left: 10px;
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
@@ -62,4 +74,15 @@ button:hover {
     text-align: center;
     font-size: 18px;
     color: #333;
+}
+
+@media (max-width: 600px) {
+    .input-group {
+        flex-direction: column;
+    }
+
+    select {
+        margin-left: 0;
+        margin-top: 10px;
+    }
 }
